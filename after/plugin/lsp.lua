@@ -55,6 +55,8 @@ return {
             }
         })
 
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
         cmp.setup({
