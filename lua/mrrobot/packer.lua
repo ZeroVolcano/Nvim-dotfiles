@@ -25,23 +25,35 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('ThePrimeagen/vim-be-good')
+  use('github/copilot.vim')
+  use('AstroNvim/AstroNvim')
+  use('folke/zen-mode.nvim')
+  use('folke/twilight.nvim')  
+  use('preservim/vim-pencil')
 
-use{
-	'VonHeikemen/lsp-zero.nvim',
-	requires = {
-		{'neovim/nvim-lspconfig'},
-		{'williamboman/mason.nvim'},
-		{'williamboman/mason-lspconfig.nvim'},
-		{'hrsh7th/nvim-cmp'},
-		{'hrsh7th/cmp-buffer'},
-		{'hrsh7th/cmp-path'},
-		{'hrsh7th/cmp-nvim-lsp'},
-		{'hrsh7th/cmp-nvim-lua'},
-		{'L3MON4D3/LuaSnip'},
-		{'rafamadriz/friendly-snippets'},
-		{'saadparwaiz1/cmp_luasnip'}
-	}
-
+  use {
+  'VonHeikemen/lsp-zero.nvim',
+  requires = {
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-nvim-lua'},
+    {'L3MON4D3/LuaSnip'},
+    {'rafamadriz/friendly-snippets'},
+    {'saadparwaiz1/cmp_luasnip'}
+  }
 }
+
+-- install without yarn or npm
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
+use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 end)

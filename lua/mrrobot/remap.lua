@@ -54,4 +54,10 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+vim.keymap.set('n', 'mp', '<Plug>MarkdownPreview', { noremap = false, silent = true })
+vim.keymap.set('n', '<M-s>', '<Plug>MarkdownPreviewStop', { noremap = false, silent = true })
+vim.keymap.set('n', '<C-p>', '<Plug>MarkdownPreviewToggle', { noremap = false, silent = true })
 
+vim.keymap.set('n', 'zm', '<cmd>ZenMode | Pencil<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('v', '<leader>y', '"*y', { noremap = true, silent = true })

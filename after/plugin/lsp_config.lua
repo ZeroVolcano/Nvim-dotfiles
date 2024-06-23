@@ -26,9 +26,17 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
+                "sumneko_lua",
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
+                "lua",
+                "typescript",
+                "json",
+                "html",
+                "css",
+                "markdown",
+                "python"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -58,6 +66,9 @@ return {
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+        local lspconfig = require('lspconfig')
+        lspconfig.tsserver.setup({})
 
         cmp.setup({
             snippet = {

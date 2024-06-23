@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1694082368\\share\\lua\\5.1\\?.lua;C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1694082368\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1694082368\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1694082368\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1694082368\\lib\\lua\\5.1\\?.so"
+local package_path_str = "C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?.lua;C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
+local install_cpath_pattern = "C:\\Users\\Jesus\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1713484068\\lib\\lua\\5.1\\?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  AstroNvim = {
+    loaded = true,
+    path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\AstroNvim",
+    url = "https://github.com/AstroNvim/AstroNvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
@@ -118,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -165,6 +180,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
+  },
   undotree = {
     loaded = true,
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
@@ -179,6 +199,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-pencil"] = {
+    loaded = true,
+    path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-pencil",
+    url = "https://github.com/preservim/vim-pencil"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Jesus\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
