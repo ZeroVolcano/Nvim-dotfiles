@@ -60,4 +60,12 @@ vim.keymap.set('n', '<C-p>', '<Plug>MarkdownPreviewToggle', { noremap = false, s
 
 vim.keymap.set('n', 'zm', '<cmd>ZenMode | Pencil<CR>', { noremap = true, silent = true })
 
-vim.keymap.set('v', '<leader>y', '"*y', { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>y', '"+y', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-_>', 'gcc', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-_>', 'gc', { noremap = true, silent = true })
+
+-- Para sistemas que no reconocen <C-_>
+vim.api.nvim_set_keymap('n', '<C-/>', 'gcc', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-/>', 'gc', { noremap = true, silent = true })
+
